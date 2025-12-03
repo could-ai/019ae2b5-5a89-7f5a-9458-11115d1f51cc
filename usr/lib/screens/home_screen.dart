@@ -54,7 +54,8 @@ class _HomeScreenState extends State<HomeScreen> {
     final isConnected = status == VpnStatus.connected;
     final isConnecting = status == VpnStatus.connecting;
     
-    Color primaryColor = isConnected ? Colors.green : Colors.blueGrey;
+    // Singapore Red for primary color
+    Color primaryColor = isConnected ? Colors.green : const Color(0xFFEF3340);
     String statusText = isConnected 
         ? "CONNECTED" 
         : isConnecting 
@@ -64,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: const Color(0xFFF5F5F5),
       appBar: AppBar(
-        title: const Text("Secure VPN"),
+        title: const Text("Singapore VPN"),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -133,7 +134,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           end: Alignment.bottomRight,
                           colors: isConnected 
                               ? [Colors.green.shade400, Colors.green.shade700]
-                              : [Colors.blueGrey.shade300, Colors.blueGrey.shade600],
+                              : [const Color(0xFFEF3340), const Color(0xFFD02030)], // Singapore Red Gradient
                         ),
                       ),
                       child: Icon(

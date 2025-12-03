@@ -11,10 +11,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Secure VPN',
+      title: 'Singapore VPN',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red), // Singapore flag is red/white
         useMaterial3: true,
       ),
       initialRoute: '/',
